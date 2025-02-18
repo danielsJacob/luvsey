@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Successful</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Upload Successful</h2>
+        {% if av1_file_url %}
+            <p class="mb-4">AV1 File: <a href="{{ av1_file_url }}" class="text-blue-500 hover:underline">{{ av1_file_url }}</a></p>
+        {% endif %}
+        {% if mp4_file_url %}
+            <p class="mb-4">MP4 File: <a href="{{ mp4_file_url }}" class="text-blue-500 hover:underline">{{ mp4_file_url }}</a></p>
+        {% endif %}
+        {% if compressed_file_url %}
+            <p class="mb-4">Compressed File: <a href="{{ compressed_file_url }}" class="text-blue-500 hover:underline">{{ compressed_file_url }}</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
